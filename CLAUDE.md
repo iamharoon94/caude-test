@@ -1,73 +1,213 @@
 # CLAUDE.md
 
-This file provides guidance for AI assistants working in this repository.
+> **A guide for AI assistants working in this repository.**
+
+---
 
 ## Repository Overview
 
-- **Repository**: caude-test
-- **Status**: Newly initialized repository (no source code yet)
-- **Primary branch**: `claude/claude-md-mlpvybcllkc349x6-74pfb`
+| Field            | Value                                          |
+| ---------------- | ---------------------------------------------- |
+| **Repository**   | `caude-test`                                   |
+| **Status**       | Newly initialized (no source code yet)         |
+| **Branch**       | `claude/claude-md-mlpvybcllkc349x6-74pfb`      |
+| **Created**      | February 2026                                  |
+
+---
 
 ## Project Structure
 
-This repository is currently empty. As the project develops, update this section to reflect the directory layout, e.g.:
+```
+caude-test/
+│
+├── CLAUDE.md            # <-- You are here! AI assistant guide
+│
+├── src/                 # Application source code (to be added)
+│   ├── components/      #     UI components
+│   ├── utils/           #     Utility/helper functions
+│   └── index.*          #     Entry point
+│
+├── tests/               # Test files (to be added)
+│
+├── docs/                # Documentation (to be added)
+│
+├── package.json         # Dependencies & scripts (to be added)
+│
+└── .gitignore           # Git ignore rules (to be added)
+```
 
-```
-/
-├── src/          # Application source code
-├── tests/        # Test files
-├── docs/         # Documentation
-├── package.json  # Dependencies and scripts (if Node.js)
-└── CLAUDE.md     # This file
-```
+> **Note:** This tree is a suggested starting layout. Update it as the project grows.
+
+---
 
 ## Development Workflows
 
 ### Getting Started
 
-_Update this section once the project has a tech stack and setup steps._
+```bash
+# 1. Clone the repository
+git clone <repo-url>
+cd caude-test
 
-### Build
+# 2. Install dependencies (once package.json exists)
+npm install        # or: yarn install / pnpm install
 
-_No build system configured yet. Update once available._
+# 3. Start development server
+npm run dev        # or: yarn dev / pnpm dev
+```
 
-### Test
+> Update the commands above once a tech stack is chosen.
 
-_No test framework configured yet. Update once available._
+---
 
-### Lint / Format
+### Quick Reference Commands
 
-_No linter or formatter configured yet. Update once available._
+| Task              | Command               | Status           |
+| ----------------- | --------------------- | ---------------- |
+| Install deps      | `npm install`         | Not configured   |
+| Dev server        | `npm run dev`         | Not configured   |
+| Build             | `npm run build`       | Not configured   |
+| Run tests         | `npm test`            | Not configured   |
+| Lint              | `npm run lint`        | Not configured   |
+| Format            | `npm run format`      | Not configured   |
+
+> Replace with actual commands as the project is set up.
+
+---
 
 ## Code Conventions
 
-_Define conventions here as the project grows, such as:_
+### Naming
 
-- Language and framework choices
-- Naming conventions (files, variables, functions)
-- Code style (indentation, quotes, semicolons)
-- Import ordering
-- Error handling patterns
-- Commit message format
+| Element          | Convention           | Example                  |
+| ---------------- | -------------------- | ------------------------ |
+| Files            | kebab-case           | `user-profile.ts`        |
+| Variables        | camelCase            | `userName`               |
+| Functions        | camelCase            | `getUserById()`          |
+| Classes          | PascalCase           | `UserService`            |
+| Constants        | UPPER_SNAKE_CASE     | `MAX_RETRIES`            |
+| Components       | PascalCase           | `UserProfile`            |
+
+### Style Rules
+
+- **Indentation:** 2 spaces
+- **Quotes:** Single quotes for strings
+- **Semicolons:** As per chosen linter config
+- **Line length:** Max 100 characters
+- **Trailing commas:** Yes (ES5+)
+
+> Adjust these once a linter/formatter (ESLint, Prettier, etc.) is configured.
+
+---
 
 ## Key Patterns and Architecture
 
-_Document architectural decisions and design patterns here as they are established._
+```
++-----------------------------------------------------+
+|                    APPLICATION                       |
+|                                                      |
+|   +-------------+   +-------------+   +-----------+  |
+|   |    Views    |-->|  Services   |-->|   Data    |  |
+|   | (UI Layer)  |   | (Business   |   | (Storage/ |  |
+|   |             |   |  Logic)     |   |  API)     |  |
+|   +-------------+   +-------------+   +-----------+  |
+|                                                      |
++-----------------------------------------------------+
+```
+
+> This is a placeholder architecture diagram. Replace with your actual design once established.
+
+---
 
 ## Dependencies
 
-_No dependencies configured yet. List key dependencies and their purposes here once added._
+### Core
+
+| Package          | Purpose                      | Version |
+| ---------------- | ---------------------------- | ------- |
+| *(none yet)*     | —                            | —       |
+
+### Dev
+
+| Package          | Purpose                      | Version |
+| ---------------- | ---------------------------- | ------- |
+| *(none yet)*     | —                            | —       |
+
+> Populate this table as dependencies are added to `package.json`.
+
+---
 
 ## Environment and Configuration
 
-_Document environment variables, config files, and secrets management here._
+### Environment Variables
+
+| Variable         | Description                  | Required | Default  |
+| ---------------- | ---------------------------- | -------- | -------- |
+| `NODE_ENV`       | Runtime environment          | No       | `development` |
+| `PORT`           | Server port                  | No       | `3000`   |
+| `DATABASE_URL`   | Database connection string   | Yes      | —        |
+| `API_KEY`        | External API key             | Yes      | —        |
+
+> These are examples. Update with actual env vars as the project is configured.
+
+### Config Files
+
+| File                | Purpose                              |
+| ------------------- | ------------------------------------ |
+| `.env`              | Local environment variables (gitignored) |
+| `.env.example`      | Template for required env vars       |
+| `tsconfig.json`     | TypeScript configuration             |
+| `.eslintrc.*`       | ESLint rules                         |
+| `.prettierrc`       | Prettier formatting rules            |
+
+---
 
 ## Common Tasks for AI Assistants
 
-When working in this repository:
+### Do's
 
-1. **Read before editing** — Always read files before modifying them
-2. **Run tests after changes** — Validate that changes do not break existing functionality
-3. **Follow existing patterns** — Match the style and conventions already present in the codebase
-4. **Keep changes minimal** — Only modify what is necessary for the task at hand
-5. **Update this file** — When adding new workflows, dependencies, or conventions, update CLAUDE.md to reflect the current state
+- **Read before editing** — Always read files before modifying them
+- **Run tests after changes** — Validate that nothing is broken
+- **Follow existing patterns** — Match the style already in the codebase
+- **Keep changes minimal** — Only modify what is necessary
+- **Update this file** — Reflect new workflows, deps, or conventions here
+
+### Don'ts
+
+- **Don't add unnecessary files** — Prefer editing existing files
+- **Don't over-engineer** — Solve the problem at hand, not hypothetical ones
+- **Don't skip validation** — Always run lint/test commands when available
+- **Don't commit secrets** — Never commit `.env`, API keys, or credentials
+
+---
+
+### Commit Message Format
+
+```
+<type>: <short summary>
+
+<optional body with more detail>
+```
+
+**Types:**
+
+| Type         | When to use                              |
+| ------------ | ---------------------------------------- |
+| `feat`       | New feature                              |
+| `fix`        | Bug fix                                  |
+| `docs`       | Documentation changes                    |
+| `style`      | Formatting, no code change               |
+| `refactor`   | Code restructuring, no behavior change   |
+| `test`       | Adding or updating tests                 |
+| `chore`      | Build, tooling, or maintenance tasks     |
+
+**Examples:**
+```
+feat: add user authentication flow
+fix: resolve null pointer in cart checkout
+docs: update CLAUDE.md with test commands
+```
+
+---
+
+*Last updated: February 17, 2026*
